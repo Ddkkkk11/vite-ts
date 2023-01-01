@@ -20,12 +20,12 @@ type A = {
   //这种写法是索引签名
 }
 type Test = {
-  [key: number]: number
+  [key: string]: number
 }
 type A2 = Record<string, number>
 // Text ==> 等价于A2 
 const test: Test = {
-  123: 123
+  '123': 123
 }
 //可以对key进行类型的检查 但是最后还是会转为字符串
 console.log(test[123])
