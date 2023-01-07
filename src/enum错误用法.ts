@@ -1,5 +1,5 @@
 //枚举的错误用法
-//number enum 1  string enum 0 other enum 0
+//number enum 1  string enum 0 other enum 0 
 enum Fruit {
     apple = 'apple',
     banana = 'banana'
