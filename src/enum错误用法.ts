@@ -5,6 +5,6 @@ enum Fruit {
     banana = 'banana'
 }
 // const f: Fruit = 'apple'; // err Type '"apple"' is not assignable to type 'Fruit'.
-const f: Fruit = Fruit.apple; // err Type '"apple"' is not assignable to type 'Fruit'.
+const f: Fruit = Fruit.apple; 
 console.log(f)
 export {}
