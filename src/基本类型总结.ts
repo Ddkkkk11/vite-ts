@@ -1,3 +1,4 @@
+//基本类型总结
 type A = boolean;
 const a: A = false;
 console.log('a', a);
