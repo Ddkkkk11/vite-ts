@@ -1,2 +1,2 @@
 ## 学习进度
-[进度](https://www.bilibili.com/video/BV1qd4y1w7is/?spm_id_from=pageDriver&vd_source=26b5f24919aeb671ba1dbff34904c160)
+[进度](https://www.bilibili.com/video/BV1fW4y1h72v/?spm_id_from=pageDriver&vd_source=26b5f24919aeb671ba1dbff34904c160)
