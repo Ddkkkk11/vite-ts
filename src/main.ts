@@ -1,36 +1,31 @@
-type A = number | string;
-const func = (a: A) => {
-  (a as number).toFixed()
+//is 判断类型
+type Rect = {
+  height: string,
+  width: string
 }
-//typeof 有很多局限性 比如 typeof null 返回object  数组 对象 函数 同理
-const func1 = (a: Date | Date[]) {
-  if (a instanceof Date) {
-    a //  (parameter) a: Date
-  }else {
-    a // a: Date[]
+type Circle = {
+  center: [number, number]
+  radius: number
+}
+const func = (a: Rect | Circle ) => {
+  // if ('width' in a && 'height' in a) {
+  //   a // Rect
+  // }
+  if (isTest(a)) {
   }
-  //instanceof 局限性 不支持简单类型 比如string number boolean
-  //但是都不支持ts独有类型
-}
-type Person = {
-  name: string
-}
-type Animal = {
-  x: string
-}
-const fun = (a: Person | Animal) => {
-  if ('name' in a) {
-    a // Person
+  if ('width' in a && 'height' in a) {
+    a//is和这种的区别是什么?
   }else {
-    //Animal
-    //in只适用于部分对象
+    a//Circle
   }
-}
-const f1 = (a: string | number) => {
-  a = 1;
-  a//number
     
   
 }
-
+function isRect(x: any): x is Rect {
+  return 'width' in x && 'height' in x
+  //如果返回值是boolean ts无法推断出类型
+}
+const isTest = (b: any): b is Rect => {
+  return 'width' in b && 'height' in b 
+}
 export {}
