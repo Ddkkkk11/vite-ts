@@ -1,13 +1,21 @@
-//void 补充
-type Fn = () => void;
-const fn: Fn = () => {
-  return ''
+//联合类型
+type A = { name: string }
+type B = { age: number }
+type C = A | B;
+const c: C = {
+  name: 'roll',
+  age: 22
 }
-const result = fn(); //const result: void
-console.log(result .toString()); //类型“void”上不存在属性“toString”
-console.log((result as any).toSting()); //断言 比void大
-//箭头函数和function 函数 都可以有多余的return  但是返回值的类型还是void
-const fnC = (): void => {
-  return '' //会报错
-} 
+//C类型属于A和B的交集
+console.log('c', c);
+const func = (a: number | string) => {
+  if (typeof a !== 'string') {
+    a.toFixed();
+  }else {
+    a.toString();
+  }
+  //拆开的这个过程叫做类型收紧
+  
+
+}
 export {}
